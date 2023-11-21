@@ -1,0 +1,157 @@
+/*
+ * Filename: headerstyles.css
+ * Author: Pietro Montagna x Giorgia
+ * Created on: 14/10/23
+ * 
+ * Version: 1.0
+ */
+
+
+/* importo il font Roboto dalle api di Google*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* creo lo stile del componente principale della barra di navigazione*/
+
+.navbar-container{
+	background-color: rgba(34,31,40,255);
+	min-height: fit-content;
+	min-height: 240px;
+	top:0;
+}
+
+.navbar-banner{
+	/*background-image: url("../assets/images/wallpaper.jpg");*/
+	display: flex;
+	flex-direction: row;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 75%;
+	min-height: 180px;
+	top:0;
+}
+
+.navbar-slogan{
+	margin: auto;
+	font-style: italic;
+	height: fit-content;
+	width: fit-content;
+	font-family: 'BebasNeue', sans-serif;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+
+.navbar{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+	height: 25%;
+	min-height: 60px;
+	position: sticky;
+	top:0;
+	font-family: 'BebasNeue', sans-serif;
+}
+
+/* il titolo nella barra di navigazione*/
+.navbar-title{
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: auto;
+	padding-left: 1vw;
+	color: #fff;
+	font-size: 2em;
+}
+
+.nav {
+    display: flex;
+	flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+	height: fit-content;
+}
+
+
+.active, .nav-item{
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.active {
+	border-bottom: #fff 1px solid !important;
+}
+
+
+.nav-content {
+	margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; /* Changed from space-between to space-around */
+}
+
+.nav-icon {
+    color: #fff;
+	margin: auto;
+    font-size: 1.2rem;
+    /* Removed justify-content as it's unnecessary here */
+}
+
+.nav-text {
+	margin: auto;
+    color: #fff;
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 10px; /* Optional: add some margin for spacing */
+}
+
+/* ... existing styles ... */
+
+@media (max-width: 200px) {
+    .navbar-container {
+        flex-direction: column;
+		background-color: bisque;
+    }
+
+    .navbar-banner {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-slogan {
+        margin: 0; /* Center the slogan */
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .navbar-title {
+        align-items: flex-end;
+        padding-right: 1vw; /* Adjust as needed */
+        order: 1; /* Places the title at the top */
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        order: 2; /* Places the nav items below the title */
+    }
+
+    .nav-item, .active {
+        width: 100%; /* Make nav items full width */
+        text-align: left; /* Align text to the left */
+    }
+}
+/* ... existing styles ... */
+
+

@@ -1,0 +1,512 @@
+/*
+ * Filename: home.css
+ * Author: Pietro Montagna x Giorgia
+ * Created on: 14/10/23
+ * 
+ * Version: 1.0
+ */
+ .home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  min-height: 1318px;
+  min-width: 800px;
+ }
+
+ .all-content-wrapper{
+  flex-grow: 1;
+ }
+
+ .suggested-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .categories-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
+  height: 15vh;
+  min-width: fit-content;
+  background-color: rgba(34, 31, 40, 0.5);
+  backdrop-filter: blur(20px); /* Blur the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.categories-container > p {
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+  min-width: fit-content;
+  max-width: 10%; /* Ensure this element doesn't take more than 20% of the space */
+  flex: 0 0 10%; /* Do not grow, do not shrink, start at 20% width */
+  height: 15vh;
+  color: #fff;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.categories-carousel-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 15vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.categories-cards-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  width: 90%;
+  height: 100%;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-nav-button.prev {
+  left: 2%; /* Adjust as needed, around 5% */
+}
+
+.carousel-nav-button.next {
+  right: 2%; /* Adjust as needed, around 5% */
+}
+
+.category-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added for absolute positioning context */
+  margin: auto;
+  height: 90%;
+  min-width: fit-content;
+  width: 15%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Blur the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.9); /* Light border for more glass effect */
+}
+
+.category-card:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Blur the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  background-color: transparent;
+}
+
+.category-card:hover > .category-text {
+  color: white;
+}
+
+.category-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 1.5rem;
+}
+
+.category-card > .category-circle {
+  margin-right: 2%;
+  margin-bottom: 4%;
+  position: absolute; /* Position the circle absolutely */
+  bottom: 0; /* Align to the bottom */
+  right: 0; /* Align to the left */
+  width: 1.2rem; /* Adjust size as needed */
+  height: 1.2rem; /* Adjust size as needed */
+  max-width: 20px;
+  max-height: 20px;
+  border-radius: 50%; /* Make it round */
+}
+
+.cases-container{
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+  min-height: 200px;
+  background-color: rgba(34, 31, 40, 0.5);
+  backdrop-filter: blur(20px); /* Blur the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  animation: fadeIn 0.3s ease-in forwards;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.cases-cards-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-width: fit-content;
+  margin: auto;
+  width: 75%;
+  height: 100%;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.case-card {
+  cursor: pointer;
+  max-width: 300px;
+  min-width: 250px; /* Adjust to a size that fits your text */
+  min-height: 120px;
+  max-height: 15vh;; /* Minimum height to ensure readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  height: auto; /* Adjust height to auto for content fitting */
+  width: 15%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  overflow: hidden; /* Add to prevent text spilling out */
+}
+
+.case-card:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Blur the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  background-color: transparent;
+}
+
+.case-card:hover > .case-title-text {
+  color: white;
+}
+
+.case-card:hover > .case-desc-text {
+  color: white;
+}
+
+.case-title-text{
+  margin-top: 0.6rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: black;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 1.3rem;
+}
+
+.case-desc-text{
+  margin-bottom: 0.6rem;
+  width: 90%;
+  padding-top: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  color: black;
+  font-size: 0.7rem;
+  word-wrap: break-word; /* Breaks long words */
+  overflow-wrap: break-word; /* Ensures the text wraps and doesn't overflow */
+  white-space: normal; /* Wraps text as necessary */
+  text-overflow: ellipsis; /* Adds '...' to text that overflows the container */
+}
+
+.insights-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
+  height: 15vh;
+  min-width: fit-content;
+  background-color: rgba(34, 31, 40, 0.5);
+  backdrop-filter: blur(20px); /* Blur the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.insights-container > p {
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+  min-width: fit-content;
+  max-width: 10%; /* Ensure this element doesn't take more than 20% of the space */
+  flex: 0 0 10%; /* Do not grow, do not shrink, start at 20% width */
+  height: 15vh;
+  color: #fff;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.insights-carousel-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 15vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.insights-cards-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  width: 90%;
+  height: 100%;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.insight-title-text{
+  margin-top: 0.6rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: black;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 1.3rem;
+}
+
+.insight-card {
+  cursor: pointer;
+  max-width: 300px;
+  min-width: 250px; /* Adjust to a size that fits your text */
+  min-height: 120px;
+  max-height: 15vh;; /* Minimum height to ensure readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  height: auto; /* Adjust height to auto for content fitting */
+  width: 15%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  overflow: hidden; /* Add to prevent text spilling out */
+}
+
+.quiz-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
+  height: 15vh;
+  min-width: fit-content;
+  background-color: rgba(34, 31, 40, 0.5);
+  backdrop-filter: blur(20px); /* Blur the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.quiz-container > p {
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+  min-width: fit-content;
+  max-width: 10%; /* Ensure this element doesn't take more than 20% of the space */
+  flex: 0 0 10%; /* Do not grow, do not shrink, start at 20% width */
+  height: 15vh;
+  color: #fff;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.quiz-carousel-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 15vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.quiz-cards-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  width: 90%;
+  height: 100%;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  background-color: rgba(34, 31, 40, 0.8);
+}
+
+.footer-container > p {
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+  min-width: fit-content;
+  max-width: 10%; /* Ensure this element doesn't take more than 20% of the space */
+  flex: 0 0 10%; /* Do not grow, do not shrink, start at 20% width */
+  height: 15vh;
+  color: #fff;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.category-circle {
+  margin-right: 2%;
+  margin-bottom: 4%;
+  position: absolute; /* Position the circle absolutely */
+  bottom: 0; /* Align to the bottom */
+  right: 0; /* Align to the left */
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  border-radius: 50%; /* Make it round */
+}
+
+.case-card > .category-circle {
+  margin-right: 2%;
+  margin-bottom: 4%;
+  position: absolute; /* Position the circle absolutely */
+  bottom: 0; /* Align to the bottom */
+  right: 0; /* Align to the left */
+  width: 0.6rem; /* Adjust size as needed */
+  height: 0.6rem; /* Adjust size as needed */
+  border-radius: 50%; /* Make it round */
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+  .suggested-container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+   .categories-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    height: 5vh;
+    background-color: rgba(34, 31, 40, 0.5);
+    backdrop-filter: blur(20px); /* Blur the background behind the card */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+  }
+  .categories-container > p {
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+    margin: auto;
+    height: 20vh;
+    color: #fff;
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .categories-container > p br {
+    display: none;
+  }
+
+  .categories-carousel-container {
+    background-color: rgba(34, 31, 40, 0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 30vh;
+    width: 100%;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .categories-cards-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    will-change: transform;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .case-card {
+    min-width: 300px; /* Larger min-width for smaller screens */
+  }
+  
+  .case-title-text {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .case-desc-text {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .insight-card {
+    min-width: 300px; /* Larger min-width for smaller screens */
+  }
+  
+  .insight-title-text {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .insight-button {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  
+}
