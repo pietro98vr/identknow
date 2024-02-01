@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/IDentKnow/static/css/main.bcce7139.css",
-    "main.js": "/IDentKnow/static/js/main.9ef43a83.js",
+    "main.js": "/IDentKnow/static/js/main.ed7cc09c.js",
     "static/js/787.c06eb2fc.chunk.js": "/IDentKnow/static/js/787.c06eb2fc.chunk.js",
     "static/media/BebasNeue.otf": "/IDentKnow/static/media/BebasNeue.2f99e8e59eadc04454dc.otf",
     "index.html": "/IDentKnow/index.html",
     "main.bcce7139.css.map": "/IDentKnow/static/css/main.bcce7139.css.map",
-    "main.9ef43a83.js.map": "/IDentKnow/static/js/main.9ef43a83.js.map",
+    "main.ed7cc09c.js.map": "/IDentKnow/static/js/main.ed7cc09c.js.map",
     "787.c06eb2fc.chunk.js.map": "/IDentKnow/static/js/787.c06eb2fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bcce7139.css",
-    "static/js/main.9ef43a83.js"
+    "static/js/main.ed7cc09c.js"
   ]
 }
