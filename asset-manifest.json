@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/IDentKnow/static/css/main.6c1e2115.css",
-    "main.js": "/IDentKnow/static/js/main.e45dbb9f.js",
+    "main.css": "/IDentKnow/static/css/main.1839a457.css",
+    "main.js": "/IDentKnow/static/js/main.f71c71ae.js",
     "static/js/787.c06eb2fc.chunk.js": "/IDentKnow/static/js/787.c06eb2fc.chunk.js",
     "static/media/BebasNeue.otf": "/IDentKnow/static/media/BebasNeue.2f99e8e59eadc04454dc.otf",
     "index.html": "/IDentKnow/index.html",
-    "main.6c1e2115.css.map": "/IDentKnow/static/css/main.6c1e2115.css.map",
-    "main.e45dbb9f.js.map": "/IDentKnow/static/js/main.e45dbb9f.js.map",
+    "main.1839a457.css.map": "/IDentKnow/static/css/main.1839a457.css.map",
+    "main.f71c71ae.js.map": "/IDentKnow/static/js/main.f71c71ae.js.map",
     "787.c06eb2fc.chunk.js.map": "/IDentKnow/static/js/787.c06eb2fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c1e2115.css",
-    "static/js/main.e45dbb9f.js"
+    "static/css/main.1839a457.css",
+    "static/js/main.f71c71ae.js"
   ]
 }
