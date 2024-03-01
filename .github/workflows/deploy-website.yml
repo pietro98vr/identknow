@@ -1,0 +1,26 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - Final
+      - lite
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Copy files to website branch
+        run: |
+          git fetch origin website:website
+          git checkout website
+          git rm -rf .
+          git checkout ${{ github.ref }} -- .
+          git commit -m "Update website from ${{ github.ref }}"
+          git push origin website
+
